@@ -12,6 +12,7 @@ import java.util.Set;
 @ToString(doNotUseGetters = true)
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,4 +24,7 @@ public class Book {
     @ManyToMany
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors;
+
+    @ManyToOne
+    private Publisher publisher;
 }
