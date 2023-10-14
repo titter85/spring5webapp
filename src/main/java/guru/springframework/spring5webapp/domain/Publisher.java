@@ -9,7 +9,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(doNotUseGetters = true, of = {"id"})
-@ToString(doNotUseGetters = true)
+@ToString(doNotUseGetters = true, exclude = {"books"})
 @Builder
 public class Publisher {
     @Id
