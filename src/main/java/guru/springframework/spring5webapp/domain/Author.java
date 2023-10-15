@@ -8,7 +8,7 @@ import java.util.Set;
 @Entity
 @Data
 @EqualsAndHashCode(of = "id", doNotUseGetters = true)
-@ToString(doNotUseGetters = true)
+@ToString(doNotUseGetters = true, exclude = {"books"})
 @NoArgsConstructor
 @AllArgsConstructor
 public class Author {
